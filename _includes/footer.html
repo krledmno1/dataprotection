@@ -1,0 +1,44 @@
+<div class="footer">
+    <div class="container">
+        <p class="copy">
+            &copy;
+            {{ site.time | date: '%Y' }}
+            <a href="http://brianmaierjr.com">Brian Maier Jr.</a>
+            Powered by
+            <a href="http://jekyllrb.com">Jekyll</a>
+        </p>
+
+        <div class="footer-links">
+            <ul class="noList">
+                {% if site.data.social.facebook %}
+                    <li>
+                        <a href="https://www.facebook.com/{{ site.data.social.facebook }}">
+                            {% include icons/facebook.html %}
+                        </a>
+                    </li>
+                {% endif %}
+                {% if site.data.social.twitter %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.data.social.twitter }}">
+                            {% include icons/twitter.html %}
+                        </a>
+                    </li>
+                {% endif %}
+                {% if site.data.social.github %}
+                    <li>
+                        <a href="https://github.com/{{ site.data.social.github }}">
+                            {% include icons/github.html %}
+                        </a>
+                    </li>
+                {% endif %}
+                {% if site.data.social.email %}
+                    <li>
+                        <a href="mailto:{{ site.data.social.email }}">
+                            {% include icons/email.html %}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
